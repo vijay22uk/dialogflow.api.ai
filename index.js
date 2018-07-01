@@ -8,7 +8,7 @@ const apiRoutes = require('./routes');
 var jwt = require('jsonwebtoken');
 var app = express();
 let server = require('http').Server(app)
-app.set('superSecret', config.SECRET);
+app.set('superSecret', process.env.SECRET);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
