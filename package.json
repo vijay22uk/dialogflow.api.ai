@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "start-dev": "webpack -d -w  & node index.js",
+    "dev": "webpack -d -w  & node index.js",
     "build": "webpack -p"
   },
   "repository": {

@@ -1,8 +1,14 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Roboto';
   }
+.sc-message--text, .sc-user-input--text {
+    font-family: 'Roboto';  
+}
+.sc-header--team-name {
+    pointer-events: none;
+}
   
 .login-form {
     width: 340px;
@@ -42,6 +48,11 @@ body{
   .App-intro {
     font-size: large;
   }
+  .App-title{
+    font-family: monospace;
+    font-size: 1.2em;
+  }
+
   .App-header{
       text-align: center;
       background-color: #2c57a9;
@@ -56,3 +67,40 @@ body{
   .sc-user-input--emoji-icon-wrapper{
       display: none;
   }
+.features{
+    font-family: "Open Sans", sans-serif;
+    margin-top: 24px;
+}
+  .features i {
+    margin: 0 20px 0 0;
+}
+.features i {
+    margin: 0 20px 0 0;
+}
+.bg-skin {
+    background: #4ACCD1;
+}
+.circled {
+    background: #4ACCD1;
+}
+.circled {
+    border-radius: 50%;
+    display: inline-block;
+    color: #fff;
+    width: 1.6em;
+    height: 1.6em;
+    text-align: center;
+    line-height: 1.6em;
+}
+.float-left {
+    float: left;
+}
+.features h5 {
+    line-height: 2em;
+    padding-top: 10px;
+    font-size: 17px;
+    vertical-align: middle;
+}
+.features p {
+    color: #7d5353;
+}
