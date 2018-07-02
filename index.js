@@ -24,4 +24,15 @@ app.get('/logout',
         res.redirect('/');
     });
 var port = process.env.PORT || '8080';
+       
+if(!process.env.PROJECT_ID) {
+    console.log('You need to specify a project ID in the environment variable PROJECT_ID.');
+    process.exit(1);
+    }
+
+if(!process.env.SERVICE_ACCOUNT_PATH) {
+    console.log('You need to specify a path to a service account keypair in environment variable SERVICE_ACCOUNT_PATH.');
+    process.exit(1);
+}      
+
 server.listen(port, () => console.log(`Server started on port ${port}`))

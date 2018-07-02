@@ -6,11 +6,7 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            messageList: [{
-                author: 'them',
-                type: 'text',
-                data: { text: `Hi ${props.name}, How may I help you` }
-            }]
+            messageList: []
         };
     }
     componentDidMount(){
@@ -18,6 +14,7 @@ class Home extends Component {
         this.socket.on('fromServer',(data)=> { 
             this._sendMessage(data.server)
         })
+        this.socket.emit('clientInit', { name: this.props.name });
     }
     _onMessageWasSent(message) {
         this.setState({

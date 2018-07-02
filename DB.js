@@ -1,6 +1,9 @@
 var users = [{
     name: 'kate',
     password: 'kate'
+},{
+    name: 'varun',
+    password: 'varun'
 }]
 var User = {
     findOne: function(reqUser, cb){
