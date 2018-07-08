@@ -1,9 +1,18 @@
 var express = require('express');
 var path = require('path');
-var bodyParser = require('body-parser');
-var jwt = require('jsonwebtoken');
 var dotenv = require('dotenv');
 const { parsed: config } = dotenv.config();
+// api.ai setup
+const fs = require('fs');
+
+let apiData = require('./keyfile');
+let data = JSON.stringify(apiData);  
+fs.writeFileSync('keyfile.json', data);
+
+
+var bodyParser = require('body-parser');
+var jwt = require('jsonwebtoken');
+
 const apiRoutes = require('./routes');
 var jwt = require('jsonwebtoken');
 var app = express();
