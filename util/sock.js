@@ -28,6 +28,9 @@ var fromClient = function () {
                     });
                     // socket.emit('fromServer', { server: 'Not Authorized', loginRequest: true });
                 } else {
+                    if(res.speech =="" && (res.action == "Default Welcome Intent" || res.action == "Default Fallback Intent")){
+                        res.speech = res.action == "Default Welcome Intent"? "Hello !" : "I can't do that, you can ask me about projects."
+                    }
                     socket.emit('fromServer', { server: res.speech, action: res.action });
                 }
             });
