@@ -48,10 +48,7 @@ body{
   .App-intro {
     font-size: large;
   }
-  .App-title{
-    font-family: monospace;
-    font-size: 1.2em;
-  }
+ 
 
   .App-header{
       text-align: center;

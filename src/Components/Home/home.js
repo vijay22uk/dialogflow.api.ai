@@ -40,7 +40,6 @@ class Home extends Component {
 
 
             <div className="container container-fluid">
-<Features />
                 <Launcher
                 agentProfile={{
                     teamName: 'Live Reporting',
